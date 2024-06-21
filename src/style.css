@@ -1,1 +1,179 @@
-https://prod.liveshare.vsengsaas.visualstudio.com/join?5DC8F22475B2857E0A5DF31984D31DF8FC74
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 90%; 
+  max-height:90%;
+}
+
+main {
+padding: 20px;
+text-align: center;
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-content: space-around;
+justify-content: space-between;
+align-items: center;
+align-items: center;
+
+} 
+
+ul {
+  display: flex;
+  flex-wrap: wrap; /* Si las tarjetas deben envolver en varias filas */
+  justify-content: space-between; /* O cualquier otro valor según tu diseño */
+  gap: 1em; /* Ajusta el espacio entre las tarjetas */
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto; /* Ajusta la altura automáticamente según el contenido */
+  width: 90%;
+  max-width: 350px;
+  /* min-height: 100vh; Esto asegura que cada tarjeta tenga al menos la altura de la ventana gráfica, comenta si no es necesario */
+  justify-content: flex-start; /* Cambia a space-evenly si deseas más espacio entre elementos */
+  gap: 1.5em; /* Ajusta el espacio entre los elementos dentro de la tarjeta */
+}
+  
+li img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+}
+
+
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  
+}
+
+select, #reset-button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+select:hover, #reset-button:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+
+
+/*
+ CSS for the main interaction
+*/
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+/*
+ Styling
+*/
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif; /*fuente de los textos*/
+  color: #1a1a1a; /*color en rojo*/
+  font-weight: 300;
+  background: rgb(255,207,60);
+  background: linear-gradient(0deg, rgba(255,207,60,1) 0%, rgba(245,206,86,1) 53%, rgba(254,253,222,1) 100%);
+}
+
+label {
+  border-radius: 8px;
+}
+
+
+.accordion {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 1px solid #E0BEF6; /* borde de color gris*/
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.accordion h2 label {
+  color: #FFFFFF; /*color de las letras del i want to see*/
+  cursor: pointer; /*pone la manito al pasar el puntero sobre las letras i wan to see*/
+  font-weight: normal;
+  padding: 15px;
+  background: #6F4F84;/*color del fondo de i want to see*/
+}
+
+.accordion label:hover,
+.accordion label:focus {
+  background: #8E68A8; /*color al pasar el cursor sobre el i want to see*/
+}
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px;
+}
+
+.accordion {
+  max-width: 20em;
+} 
+
+span {
+  
+}
