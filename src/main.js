@@ -1,7 +1,7 @@
 import { filterData, sortData } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import { computeStats } from './dataFunctions.js';
-import { computeStats } from './dataFunctions.spec.js';
+import { computeStats as calcular } from './dataFunctions.spec.js';
 
 import data from "./data/dataset.js";
 
@@ -10,10 +10,6 @@ const root = document.getElementById("root");
 root.appendChild(showData);
 
 let filteredData = data;
-
-/*const typeValue = filterType.value;
-  const genderValue = filterGender.value;
-  const sizeValue = filterSize.value;*/
 
 const filterType = document.getElementById("filter-select");
 filterType.addEventListener("change", function (event) {
@@ -105,11 +101,34 @@ clear.addEventListener("click", function () {
   sort.value = "";
 });
 
+
+const statistics = document.getElementById("compute-stats-btn");
+statistics.addEventListener("click", function () {
+  const statsDatos = document.createElement('p');
+  const computedStats = computeStats(fakeData);
+  const petCatAvg = computedStats.petCatAvg;
+  const petDogAvg = computedStats.petDogAvg;
+  const genderMaleAvg = computedStats.genderMaleAvg;
+  const genderFemaleAvg = computedStats.genderFemaleAvg;
+  statsDatos.innerHTML = `<p>Tenemos un promedio de ${petCatAvg}% felinos</p>
+                          <p>Hay un promedio de ${petDogAvg}% caninos</p>
+                          <p>El cual ${genderMaleAvg}% son machos</p>
+                          <p>${genderFemaleAvg}% son hembras</p>`;
+  root.appendChild(statsDatos);
+});
+
+
+
+/*
 const statistics = document.getElementById("compute-stats-btn")
 statistics.addEventListener('click', function () {
-  const stats = computeStats(data);
-  
-  //proporcionar la data para los calculos
-  //calcular cuanto gstos perros female , male, big, small la tenemos ok en la carpeta. spect.js
-}
-)
+  const statsDatos = document.createElement('p');
+  const petCat = petCatStats(data);
+  const petDog = petDogStats(data);
+  const genderMale = genderMaleStats(data);
+  const genderFemale = genderFemaleStats(data);
+ statsDatos.innerHTML = "<p> Tenemos un promedio de ${petCat}% felinos</p><p>Hay un promedio de ${petDog}% caninos</p><p>El cual ${genderMale}% son machos</p>y ${genderFemale}% son hembras</p>";
+ root.appendChild(statsDatos);
+});
+*/
+
