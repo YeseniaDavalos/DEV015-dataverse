@@ -1,6 +1,6 @@
 // Aqui puedes agregar los datos que necesites para tus pruebas
 // al menos debe tener uno que se llame "data"
-import { computeStats } from '../src/dataFunctions.js';
+//import { computeStats } from '../src/dataFunctions.js';
 import { data } from '../src/data.js';
 export const fakeData = [];
 

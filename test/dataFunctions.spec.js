@@ -1,5 +1,6 @@
 import { filterData, computeStats } from '../src/dataFunctions.js';
 import data from '../src/data.js';
+//import { fakeData } from './dataFunctions.spec.js';
 
 describe("filterData", () => {
   it("should filter pets by type and return the quantity of cats", () => {
@@ -43,3 +44,4 @@ describe("computeStats", () => {
     expect(stats.genderFemaleAvg).toBe('54.17'); // Porcentaje de hembras
   });
 });
+
