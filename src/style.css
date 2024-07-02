@@ -1,95 +1,251 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-  margin: 0; padding: 0;
-  font-family: "Montserrat", sans-serif;
-  outline: none; border: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: .2s linear;
-}
-.navbar a {
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  color: #511D00;
-  margin: 10px;
-}
-header img {
-  height: 60px;
-  padding-left: 50px; 
-}
-.Heart, .Account {
-  width: 40px; 
-  height: 40px; 
-  padding-right: 10px;
-  
-}
-.imgperro {
-  width: 100%;
-  height: auto;
-}
-.adopt-a-pet {
-  position: absolute; /* Posiciona el texto de forma absoluta dentro del contenedor */
-  top: 30%; /* Ajusta la posición vertical según sea necesario */
-  left: 8%; /* Ajusta la posición horizontal según sea necesario */
-  transform: translate(-20%, -20%); /* Ajuste de la posición */  
-  padding: 10px; /* Espaciado interno */
-  color: #6F4F84;
-  font-size: 36px;
-  font-weight: bold;
-}
-.subtitle {
-  position: absolute; /* Posiciona el texto de forma absoluta dentro del contenedor */
-  top: 40%; /* Ajusta la posición vertical según sea necesario */
-  left: 10%; /* Ajusta la posición horizontal según sea necesario */
-  transform: translate(-20%, -20%); /* Ajuste de la posición */  
-  padding: 10px; /* Espaciado interno */
-  color: #511D00;
-  font-size: 24px;
-  font-weight: bold;
-}
-.description1 {
-  position: absolute; /* Posiciona el texto de forma absoluta dentro del contenedor */
-  top: 48%; /* Ajusta la posición vertical según sea necesario */
-  left: 10%; /* Ajusta la posición horizontal según sea necesario */
-  transform: translate(-20%, -20%); /* Ajuste de la posición */  
-  padding: 10px; /* Espaciado interno */
-  color: #511D00;
-  font-size: 12px;
-}
-.description2 {
-  position: absolute; /* Posiciona el texto de forma absoluta dentro del contenedor */
-  top: 52%; /* Ajusta la posición vertical según sea necesario */
-  left: 10%; /* Ajusta la posición horizontal según sea necesario */
-  transform: translate(-20%, -20%); /* Ajuste de la posición */  
-  padding: 10px; /* Espaciado interno */
-  color: #511D00;
-  font-size: 12px;
-}
-header {
-  display: flex;
-  font-family: "Montserrat", sans-serif;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #DFD3C3;
-  padding: 10px 10px;
-  outline: none; border: none;
+:root{
+  --purple: #471863;
 }
 
-.our-animals {
-  background-color: #DFD3C3;
-  font-size: 24px;          
-  font-weight: bold;        
-  color: #511D00;          
-  text-align: center;          
-  padding: 10px 10px;
-}       
-footer {
-  background-color: #FFFFFF;
-  color: #511D00;
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Montserrat", sans-serif;
+ outline: none;
+ border: none;
+ text-decoration: none;
+ text-transform: capitalize;
+ transition: .2s linear;
+ font-size: 26px;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+ }
+
+ section{
+  padding: 2rem 9%;
+ }
+
+ .heading{
   text-align: center;
-  padding: 10px 0;
-}
-@media (max-width:600px){
+  font-size: 4rem;
+  color: #4F2E1D;
+  padding: 1rem;
+  margin: 2rem 0;
+  background: #C7B198;
+ }
 
+
+ .btn{
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: #471863;
+  color: #ffffff;
+  padding: .9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+ }
+
+ .btn:hover{
+  background: #6F4F84;
+ }
+
+ header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #DFD3C3;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+ }
+
+ header .logo {
+  height: 90px;
+ }
+
+ header .navbar a {
+  font-size: 2rem;
+  color: #511D00;
+  padding: 0 1.5rem;
+ }
+ 
+ header .navbar a:hover {
+  color: #ffffff;
+ }
+ 
+ header .icons a{
+  font-size: 2.5rem;
+  color: #471863;
+  margin-left: 1.5rem;
+ }
+
+ header .icons a:hover{
+  color: #ffffff;
+ }
+
+ header #toggler{
+  display: none;
+ }
+
+ header .fa-bars{
+  font-size: 3rem;
+  color: #471863;
+  border-radius: .5rem;
+  padding: .5rem .1.5rem;
+  cursor: pointer;
+  border: .1rem solid rgba(0, 0, 0, .3);
+  display: none;
+ }
+
+.home{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./img/image26.png') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+.home .content{
+  max-width: 50rem;
+}
+
+.home .content h3{
+  font-size: 6rem;
+  color: #471863;
+}
+
+.home .content span{
+  font-size: 3.5rem;
+  color: #511D00;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.home .content p{
+  font-size: 1.5rem;
+  color: #705445;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+
+
+
+
+.our .row{
+  display: flex;
+  align-items: center;
+  gap:2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.our .row .video-contain{
+  flex: 1 1 40rem;
+  position: relative;
+}
+
+.our .row .video-contain video{
+  width: 100%;
+  border: 1.5rem solid #fff;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0.1);
+}
+
+.our .row .content{
+  flex:1 1 40rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:991px){
+
+  html{
+    font-size: 55%;
+  }
+
+  header{
+    padding: 2rem;
+  }
+
+  section{
+    padding: 2rem;
+  }
+
+  .home{
+    background-position: left;
+  }
+ }
+
+ @media (max-width:768px){
+
+   header .fa-bars{
+    display: block;
+   }
+
+   header .navbar{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background-color: #C7B198;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #toggler:checked ~ .navbar{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #DFD3C3;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    display: block;
+  }
+
+  .home .content h3{
+    font-size: 5rem;
+  }
+  .home .content span{
+    font-size: 2.5rem;
+  }
+ }
+
+ @media (max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .heading{
+    font-size: 3rem;
+
+  }
+
+ }
