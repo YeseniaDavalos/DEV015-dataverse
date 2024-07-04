@@ -8,6 +8,7 @@
   <title>Pet Finder</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -22,6 +23,7 @@
       <a href="#Stadistics">Stadistics</a>
       <a href="#About us">About us</a>
       <a href="#Donate">Donate</a>
+      <a href="#Donate">Contact us</a>
     </nav>
     <div class="icons">
       <a href="#" class="fas fa-heart"></a>
@@ -35,21 +37,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- empieza la parte donde esta el video y cuenta de about us-->
-
+  <!-- este es el encabezado -->
   <section class="home" id="home">
 
     <div class="content">
@@ -61,6 +50,111 @@
     </div>
 
   </section>
+  <!-- este seria el encabezado-->
+
+
+
+
+
+
+  <!-- aca van las cards-->
+  <h1 class="heading"> <span> Our </span> Animals </h1>
+  <main>
+    <h2 class="handle">
+      <label for="select">
+        I want to see:
+      </label>
+    </h2>
+
+
+    <div class="content">
+      <select id="filter-select" name="campo">
+        <option value="">Select Pet</option>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+      </select>
+
+
+      <label for="gender-select"></label>
+      <select id="gender-select" name="campo1" data-testid="select-filter">
+        <option value="">All gender</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select>
+
+
+      <label for="size-select"></label>
+      <select id="size-select" name="campo2">
+        <option value="">Pet size</option>
+        <option value="Small">Small</option>
+        <option value="Big">Big</option>
+      </select>
+      <select data-testid="sort" name="sort" id="ordenar">
+        <option value="">Ordenar A-Z</option>
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+      </select>
+
+
+      <div id="button-container">
+        <button id="reset-button">Clear</button>
+      </div>
+    </div>
+    </section>
+
+  </main>
+
+  <!-- aca van las cards-->
+
+
+
+
+
+  <script src="main.js" type="module"></script>
+  <div id="root">
+
+  </div>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+  </div>
+
+
+
+
+  <!-- aca estan als estadisticas-->
+  <h1 class="heading"> <span> Stadistics </span></h1>
+
+  <button id="compute-stats-btn">Compute Stats</button>
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Work', 11],
+        ['Eat', 2],
+        ['Commute', 2],
+        ['Watch TV', 2],
+        ['Sleep', 7]
+      ]);
+
+      var options = {
+        title: 'My Daily Activities'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+  <div id="piechart" style="width: 900px; height: 500px;"></div>
+
 
 
   <section class="our" id="animals">
@@ -87,6 +181,12 @@
   </section>
 
   <!-- termina la parte donde esta el video y cuenta de about us-->
+
+
+
+
+
+
 
 
   <!-- empieza la parte de etiquetas-->
@@ -119,52 +219,49 @@
 
 
 
-    <section class="footer-top">
+  <section class="footer-top">
 
-      <div class="footer-column">
+    <div class="footer-column">
 
-        <div class="box">
-          <h3>Quick Links</h3>
-          <a href="#">Home</a>
-          <a href="#">Filter</a>
-          <a href="#">Statistics</a>
-          <a href="#">About us</a>
-          <a href="#">Donate</a>
-        </div>
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Filter</a>
+        <a href="#">Statistics</a>
+        <a href="#">About us</a>
+        <a href="#">Donate</a>
+        <a href="#">Contact us</a>
+      </div>
 
 
-        <div class="box">
-          <h3>Extra Links</h3>
-          <a href="#">My Account</a>
-          <a href="#">My Donations</a>
-          <a href="#">My Favorite</a>
-
-        </div>
-
-        <div class="box">
-          <h3>Locations</h3>
-          <a href="#">Colombia</a>
-          <a href="#">Argentina</a>
-          <a href="#">Perú</a>
-        </div>
-
-        <div class="box">
-          <h3>Contact Info</h3>
-          <a href="#">+54 444 333 222</a>
-          <a href="#">+31 888 333 222</a>
-          <a href="mailto:PetFinder@gmail.com">PetFinder@gmail.com</a>
-          <a href="#">Colombia, Peru - 400104</a>
-          <div class="payment-methods">
-            <img src="https://ps.w.org/woo-mpgs/assets/icon-256x256.jpg?rev=2087215" alt="Mastercard">
-            <img src="https://cdn.iconscout.com/icon/free/png-256/free-paypal-58-711793.png?f=webp" alt="Paypal">
-            <img src="https://companiesmarketcap.com/img/company-logos/256/V.png" alt="Visa">
-          </div>
-        </div>
-
+      <div class="box">
+        <h3>Extra Links</h3>
+        <a href="#">My Account</a>
+        <a href="#">My Favorite</a>
 
       </div>
 
-      <div class="highlight">Created By <span> Bárbara & Yesenia </span> | All Rights Reserved </div>
+      <div class="box">
+        <h3>Locations</h3>
+        <a href="#">Colombia</a>
+        <a href="#">Argentina</a>
+        <a href="#">Perú</a>
+      </div>
+
+      <div class="box">
+        <h3>Contact Info</h3>
+        <a href="#">+54 444 333 222</a>
+        <a href="#">+31 888 333 222</a>
+        <a href="mailto:PetFinder@gmail.com">PetFinder@gmail.com</a>
+        <a href="#">Colombia, Peru - 400104</a>
+        <div class="payment-methods">
+          <img src="https://ps.w.org/woo-mpgs/assets/icon-256x256.jpg?rev=2087215" alt="Mastercard">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-paypal-58-711793.png?f=webp" alt="Paypal">
+          <img src="https://companiesmarketcap.com/img/company-logos/256/V.png" alt="Visa">
+        </div>
+
+
+        <div class="highlight">Created By <span> Bárbara & Yesenia </span> | All Rights Reserved </div>
 
 
 </body>
