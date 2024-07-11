@@ -9,38 +9,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
+ 
+
 </head>
 
 <body>
   <header>
-
     <!-- empieza la parte de header, donde estan los iconos y tambien logo-->
     <input type="checkbox" name="" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
     <a href="/"><img src="img/Logo (1).png" alt="Logo" class="logo"></a>
     <nav class="navbar">
-      <a href="#Filter">Filter</a>
-      <a href="#Stadistics">Stadistics</a>
-      <a href="#About us">About us</a>
-      <a href="#Donate">Donate</a>
-      <a href="#Donate">Contact us</a>
+      <a href="#filter-select">Filter</a>
+      <a href="#stadistics">Stadistics</a>
+      <a href="#animals">About us</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact us</a>
     </nav>
     <div class="icons">
       <a href="#" class="fas fa-heart"></a>
       <a href="#" class="fas fa-user"></a>
     </div>
-
     <!-- termina la parte de header, donde estan los iconos y tambien logo-->
   </header>
-
-
-
-
-
   <!-- empieza la parte donde esta el video y cuenta de about us-->
   <!-- este es el encabezado -->
   <section class="home" id="home">
-
     <div class="content">
       <h3>Adopt a pet</h3>
       <span>A loyal friend awaits you</span>
@@ -48,15 +42,8 @@
         orffer.</p>
       <a href="#" class="btn">Learn more</a>
     </div>
-
   </section>
   <!-- este seria el encabezado-->
-
-
-
-
-
-
   <!-- aca van las cards-->
   <h1 class="heading"> <span> Our </span> Animals </h1>
   <main>
@@ -65,24 +52,18 @@
         I want to see:
       </label>
     </h2>
-
-
     <div class="content">
       <select id="filter-select" name="campo">
         <option value="">Select Pet</option>
         <option value="Dog">Dog</option>
         <option value="Cat">Cat</option>
       </select>
-
-
       <label for="gender-select"></label>
       <select id="gender-select" name="campo1" data-testid="select-filter">
         <option value="">All gender</option>
         <option value="Female">Female</option>
         <option value="Male">Male</option>
       </select>
-
-
       <label for="size-select"></label>
       <select id="size-select" name="campo2">
         <option value="">Pet size</option>
@@ -94,78 +75,51 @@
         <option value="asc">A-Z</option>
         <option value="desc">Z-A</option>
       </select>
-
-
       <div id="button-container">
         <button id="reset-button">Clear</button>
       </div>
     </div>
-    </section>
-
   </main>
-
   <!-- aca van las cards-->
 
-
-
-
-
-  <script src="main.js" type="module"></script>
   <div id="root">
-
   </div>
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-  </div>
-
-
-
-
   <!-- aca estan als estadisticas-->
-  <h1 class="heading"> <span> Stadistics </span></h1>
-
-  <button id="compute-stats-btn">Compute Stats</button>
-
-
+  <h1 class="heading" id="stadistics"> <span> Our Stadistics </span></h1>
+  <div class="contenedorStadisticas">
+  <button id="compute-stats-btn"></button>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
+          google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
+      function drawChart() {
 
-      var data = google.visualization.arrayToDataTable([
+        var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-        ['Commute', 2],
-        ['Watch TV', 2],
-        ['Sleep', 7]
-      ]);
+        ['Dog', 50.50],
+        ['Cat', 50.50],
+        ['Male', 45.83],
+        ['Female', 54.17],
+        ]);
 
-      var options = {
-        title: 'My Daily Activities'
-      };
+        var options = {
+          title: 'Stadistics'
+        };
 
-      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-      chart.draw(data, options);
-    }
+        chart.draw(data, options);
+      }
   </script>
-
   <div id="piechart" style="width: 900px; height: 500px;"></div>
-
-
-
+</div>
   <section class="our" id="animals">
     <h1 class="heading"> <span> About </span> Us </h1>
-
     <div class="row">
-
       <div class="video-contain">
         <video src="img/volunteer.mp4" loop autoplay muted></video>
       </div>
-
       <div class="content">
         <h3>why choose this?</h3>
         <p>Our mission: Pet Finder is an animal welfare organization dedicated to creating a better future for both
@@ -174,38 +128,63 @@
         </p>
         <a href="#" class="btn">Learn more</a>
       </div>
-
-
     </div>
-
   </section>
 
   <!-- termina la parte donde esta el video y cuenta de about us-->
-
-
-
-
-
-
-
-
-  <!-- empieza la parte de etiquetas-->
-  2028
-  <!-- termina la parte de etiquetas-->
+  <!-- empieza la parte de donate-->
+  <h1 class="heading" id="donate"> <span> Help </span> our animals </h1>
+  <body>
+    <div class="container-help-our-animals">
+        <div class="content-help-our-animals">
+            <p>Your generosity is vital in providing our animals with the necessary food, veterinary care, and support they need to live a happy and healthy life.</p>
+            <p>Through your donation, we are able to offer a safe haven to the most vulnerable dogs and cats, including those who have experienced mistreatment, neglect, abandonment, or are simply unwanted.</p>
+            
+                <p>We care for up to 100 animals every day and re-home around 250 animals a year</p>
+                <p>We rescue over 160 animals per year, those who we can’t reunite, we re-home.</p>
+                <p>Our Sanctuary provides a refuge for hundreds of vulnerable dogs and cats who have been mistreated, neglected, abandoned or are unwanted.</p>
+                <p>We never put a healthy animal down</p>
+                <p>We never turn away animals in need, as long as we have the capacity and resources to meet their specific needs</p>
+                <p>We’re dedicated to finding forever homes!</p>
+            
+        </div>
+        <div class="donation-box">
+            <h2>Donate to</h2>
+            <div class="logo">
+                <img src="img/Logo (1).png" alt="Pet Finder">
+            </div>
+            <div class="amount">
+                <input type="number" value="0" min="0" step="1" id="donation-amount">
+                <span>USD</span>
+            </div>
+            <label>
+                <input type="checkbox" id="monthly-donation">
+                Make it a monthly donation
+            </label>
+            <button class="paypal-button">Donate with PayPal</button>
+            <button class="card-button">Donate with credit or debit card</button>
+        </div>
+    </div>
+</body>
+  <!-- termina la parte de donates-->
 
 
   <!--seccion de contacto 3328-->
+
   <section class="contact" id="contact">
+
     <h1 class="heading"> <span> Contact </span> Us </h1>
 
     <div class="row">
-      <form action="formulario">
+
+      <form action="">
         <input type="text" placeholder="name" class="box">
         <input type="email" placeholder="email" class="box">
         <input type="number" placeholder="number" class="box">
         <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
         <input type="submit" value="send message" class="btn">
       </form>
+
       <div class="image">
         <img src="img/send.png" alt="">
       </div>
@@ -214,10 +193,6 @@
   </section>
 
   <!-- terminala seccion de contacto -->
-
-
-
-
 
   <section class="footer-top">
 
@@ -228,9 +203,9 @@
         <a href="#">Home</a>
         <a href="#">Filter</a>
         <a href="#">Statistics</a>
-        <a href="#">About us</a>
-        <a href="#">Donate</a>
-        <a href="#">Contact us</a>
+        <a href="#animals">About us</a>
+        <a href="#donate">Donate</a>
+        <a href="#contact">Contact us</a>
       </div>
 
 
@@ -238,7 +213,6 @@
         <h3>Extra Links</h3>
         <a href="#">My Account</a>
         <a href="#">My Favorite</a>
-
       </div>
 
       <div class="box">
@@ -259,11 +233,12 @@
           <img src="https://cdn.iconscout.com/icon/free/png-256/free-paypal-58-711793.png?f=webp" alt="Paypal">
           <img src="https://companiesmarketcap.com/img/company-logos/256/V.png" alt="Visa">
         </div>
+      </div>
+    </div>
+    <div class="highlight">Created By <span> Bárbara y Yesenia </span> | All Rights Reserved </div>
 
-
-        <div class="highlight">Created By <span> Bárbara & Yesenia </span> | All Rights Reserved </div>
-
-
+  </section>
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>

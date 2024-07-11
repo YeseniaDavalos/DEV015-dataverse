@@ -1,8 +1,11 @@
 import { filterData, computeStats } from '../src/dataFunctions.js';
-import data from '../src/data.js';
+import {testData as data} from './data.js';
 //import { fakeData } from './dataFunctions.spec.js';
 
-describe("filterData", () => {
+
+//llamar uno con pet, petSize y gender
+
+describe.only("filterData", () => {
   it("should filter pets by type and return the quantity of cats", () => {
     const totalCats = filterData(data, "Pet", "Cat");
     expect(totalCats.length).toBe(12); // ¿Cuántos gatos tenemos?
@@ -45,3 +48,6 @@ describe("computeStats", () => {
   });
 });
 
+
+
+//hacer un test sobre sort.data

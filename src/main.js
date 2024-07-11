@@ -1,7 +1,7 @@
 import { filterData, sortData } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import { computeStats } from './dataFunctions.js';
-//import { fakeData } from './data.js';
+import { fakeData } from './data.js';
 
 import data from "./data/dataset.js";
 

@@ -16,18 +16,18 @@ export const sortData = (data, sortBy, sortOrder) => {
 };
 
 export const filterData = (data, filterBy, value) => {
-  if (filterBy === 'Gender') {
-    const filterGender = data.filter((item) => item.facts[filterBy] <= value); //le damos un valor al filtro que llamamos de nuestra data.js
-    return filterGender;
-  }
-  if (filterBy === 'Pet') {
-    const filterPet = data.filter((item) => item.facts[filterBy] <= value);
+  //if (filterBy === 'Gender') {
+  const filterGender = data.filter((item) => item.facts[filterBy] === value); //le damos un valor al filtro que llamamos de nuestra data.js
+  return filterGender;
+  //}
+  /* if (filterBy === 'Pet') {
+    const filterPet = data.filter((item) => item.facts[filterBy] = value);
     return filterPet;
   }
   if (filterBy === 'Pet size') {
-    const filterSize = data.filter((item) => item.facts[filterBy] <= value); 
+    const filterSize = data.filter((item) => item.facts[filterBy] = value); 
     return filterSize; 
-  }
+  }*/
 };
 
 export const computeStats = (data) => {
@@ -108,9 +108,9 @@ export const computeStats = (data) => {
   });
   const petCat = petCatStats(data);*/
 
-  // usar reduce
+// usar reduce
   
-  /*function add(petCat,petDog){
+/*function add(petCat,petDog){
     return petCat + petDog
   }
 
@@ -119,6 +119,6 @@ export const computeStats = (data) => {
   }*/
 
 
-  //aqui le digo cual es el filtro que quiero que haga. 
-  //crear la funcion computestatsdata
-  //realizar calculos segun el criterio
+//aqui le digo cual es el filtro que quiero que haga. 
+//crear la funcion computestatsdata
+//realizar calculos segun el criterio
