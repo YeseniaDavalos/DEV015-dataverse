@@ -187,22 +187,22 @@ export default [
 
   },
   {
-    "id": "Maggie",
-    "name": "Maggie",
-    "shortDescription": "Sweetheart Maggie is a worried lady who seems to have not had the easiest start in life.",
-    "About it": "Arriving to us very shut down and scared; the staff have worked hard to win her trust and we now have an absolute cuddle monster who loves playing, snuggling and being out for her walks in the fields (she even walks nicely on the lead!).",
-    "imageUrl": "https://teckelsanimalsanctuaries.co.uk/wp-content/uploads/2024/03/ChelseaMaePhotography_Teckels-30.jpg",
-    "facts": {
-      "Pet": "Dog",
-      "Gender": "Female",
-      "Pet size": "Big"
+    'id': 'Maggie',
+    'name': 'Maggie',
+    'shortDescription': 'Sweetheart Maggie is a worried lady who seems to have not had the easiest start in her life so far.',
+    'About it': 'Arriving to us very shut down and scared; the staff have worked hard to win her trust and we now have an absolute cuddle monster who loves playing, snuggling and being out for her walks in the fields (she even walks nicely on the lead!). She has become a favorite among the staff and volunteers due to her sweet nature and playful spirit. Every day she shows more confidence and happiness, making everyone around her smile with her joyful energy and loving personality.',
+    'imageUrl': "https://teckelsanimalsanctuaries.co.uk/wp-content/uploads/2024/03/ChelseaMaePhotography_Teckels-30.jpg",
+    'facts': {
+      'Pet': 'Dog',
+      'Gender': 'Female',
+      'PetSize': 'Big'
     },
 
   },
   {
     "id": "Nancy",
     "name": "Nancy",
-    "shortDescription": "Cutie Nancy is on the lookout for her new home having found herself in Teckels care through no fault of her own.",
+    "shortDescription": "Cutie Nancy is looking for her new home, having ended up in Teckels care through no fault of her own.",
     "About it": "Nancy has lived in a home before and is desperate to get back to her  home comforts. She would like to live in an adult-only home with no other pets as she can be a worrier. She will also need a private, fully enclosed garden to play in and ideally live away from busy roads.",
     "imageUrl": "https://teckelsanimalsanctuaries.co.uk/wp-content/uploads/2023/02/Nancy-1.jpg",
     "facts": {

@@ -7,13 +7,17 @@ export const renderItems = (data) => {
     const li = document.createElement("li");
     ul.appendChild(li);
 
+
+    //const divImg = document.createElement("div");
+    //divImg.appendChild(li);
+
     //imagen
     const imageUrl = document.createElement("img");
     imageUrl.setAttribute("src", item.imageUrl);
     imageUrl.setAttribute("alt", item.name);
     li.appendChild(imageUrl);
 
-    
+
     //texto
     const dl = document.createElement("dl");
     li.appendChild(dl);
@@ -37,7 +41,7 @@ export const renderItems = (data) => {
     const dtAboutIt = document.createElement("dd");
     dl.appendChild(dtAboutIt);
     dtAboutIt.innerHTML = item["About it"];
-    
+
     //facts
 
     const dtPet = document.createElement('dt');
@@ -96,9 +100,9 @@ function crearLista(data) {
 // 6. Finalmente, retornar el elemento <ul>.
 return ul;
 }
- 
-// Para concluir esta fase, debes seleccionar el elemento HTML mediante un selector del DOM. 
-//Posteriormente, indica dónde se debe colocar el resultado de la invocación de renderItems, 
+
+// Para concluir esta fase, debes seleccionar el elemento HTML mediante un selector del DOM.
+//Posteriormente, indica dónde se debe colocar el resultado de la invocación de renderItems,
 //recurriendo nuevamente a innerHTML o appendChild
 
 
