@@ -32,5 +32,5 @@ const createData = (numCats, numDogs) => {
   return data;
 };
   
-export const testData = createData(12, 12);
+export const data = createData(12, 12);
   

@@ -1,6 +1,8 @@
 export const renderItems = (data) => {
   //console.log(data);
   const ul = document.createElement("ul");
+  ul.setAttribute("itemscope");
+  ul.setAttribute('itemtype', 'https://schema.org/Thing');
 
   data.forEach((item) => {
     //console.log(item);//
@@ -28,7 +30,7 @@ export const renderItems = (data) => {
     dtNombre.innerHTML = "Nombre: ";
 
     const ddNombre = document.createElement("dd");
-    ddNombre.setAttribute("intemprop", "name");
+    ddNombre.setAttribute("itemprop", "name");
     dl.appendChild(ddNombre);
     ddNombre.innerHTML = item.name;
 

@@ -3,7 +3,7 @@ export default [
     "id": "wilbur",
     "name": "wilbur",
     "shortDescription": "Just look at this handsome boy!!.",
-    "About it": "Wilbur is looking for his new pad with a patient family who can help him settle and find his feet. Wilbur is potentially a Caucasian Shepherd (mix) which can be known to have some quirky breed traits. Experience with Caucasians/ guard breeds or extensive breed research would be beneficial.",
+    "descriptionsclear": "Wilbur is looking for his new pad with a patient family who can help him settle and find his feet. Wilbur is potentially a Caucasian Shepherd (mix) which can be known to have some quirky breed traits. Experience with Caucasians/ guard breeds or extensive breed research would be beneficial.",
     "imageUrl": "https://teckelsanimalsanctuaries.co.uk/wp-content/uploads/2024/05/wilbur3.jpg",
     "facts": {
       "Pet": "Dog",
@@ -206,9 +206,9 @@ export default [
     "About it": "Nancy has lived in a home before and is desperate to get back to her  home comforts. She would like to live in an adult-only home with no other pets as she can be a worrier. She will also need a private, fully enclosed garden to play in and ideally live away from busy roads.",
     "imageUrl": "https://teckelsanimalsanctuaries.co.uk/wp-content/uploads/2023/02/Nancy-1.jpg",
     "facts": {
-      "Pet": "Dog",
-      "Gender": "Female",
-      "Pet size": "Big"
+      "pet": "Dog",
+      "gender": "Female",
+      "petSize": "Big"
     },
 
   },

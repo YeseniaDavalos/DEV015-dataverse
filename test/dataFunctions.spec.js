@@ -1,5 +1,5 @@
 import { filterData, computeStats } from '../src/dataFunctions.js';
-import {testData} from './data.js';
+import {data as testData} from './data.js';
 //import { fakeData } from './dataFunctions.spec.js';
 
 

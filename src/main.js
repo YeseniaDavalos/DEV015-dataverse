@@ -4,6 +4,7 @@ import { computeStats } from './dataFunctions.js';
 //import { fakeData } from './data.js';
 
 import data from "./data/dataset.js";
+//import { testData } from "../test/data.js";
 
 const showData = renderItems(data); //cambiar a renderItems
 const root = document.getElementById("root");
@@ -105,7 +106,7 @@ clear.addEventListener("click", function () {
 const statistics = document.getElementById("compute-stats-btn");
 statistics.addEventListener("click", function () {
   const statsDatos = document.createElement('p');
-  const computedStats = computeStats(fakeData);
+  const computedStats = computeStats(data);
   const petCatAvg = computedStats.petCatAvg;
   const petDogAvg = computedStats.petDogAvg;
   const genderMaleAvg = computedStats.genderMaleAvg;
