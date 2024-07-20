@@ -1,8 +1,6 @@
-import { filterData, computeStats } from '../src/dataFunctions.js';
+import { filterData, computeStats, sortData } from '../src/dataFunctions.js';
 import {data as testData} from './data.js';
 //import { fakeData } from './dataFunctions.spec.js';
-
-
 //llamar uno con pet, petSize y gender
 
 describe.only("filterData", () => {

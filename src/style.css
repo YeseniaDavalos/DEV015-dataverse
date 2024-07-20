@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
-  --purple: #471863;
+  --purple: #6F4F84;
 }
 
 *{
@@ -15,6 +15,7 @@
  transition: .2s linear;
  font-size: 26px;
 }
+
 
 html {
   font-size: 62.5% !important;
@@ -42,7 +43,7 @@ html {
   display: inline-block;
   margin-top: 1rem;
   border-radius: 5rem;
-  background: #471863;
+  background: #6F4F84;
   color: #ffffff;
   padding: .9rem 3.5rem;
   cursor: pointer;
@@ -50,7 +51,7 @@ html {
  }
 
  .btn:hover{
-  background: #6F4F84;
+  background-color: #c990ef;
  }
 
  header {
@@ -83,7 +84,7 @@ html {
  
  header .icons a{
   font-size: 2.5rem;
-  color: #471863;
+  color: #6F4F84;
   margin-left: 1.5rem;
  }
 
@@ -97,7 +98,7 @@ html {
 
  header .fa-bars{
   font-size: 3rem;
-  color: #471863;
+  color: #6F4F84;
   border-radius: .5rem;
   padding: .5rem .1.5rem;
   cursor: pointer;
@@ -120,7 +121,7 @@ html {
 
 .home .content h3{
   font-size: 6rem;
-  color: #471863;
+  color: #6F4F84;
 }
 
 .home .content span{
@@ -141,15 +142,25 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 49vh;
   margin: 0;
   text-align: center;
 }
 /* Aqui van los botones*/
-
-.handle {
- 
+.filter-container {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  justify-content: center;
 }
+
+.label-style {
+  color: #6F4F84;
+  padding: 10px 20px; 
+  font-size: 20px; 
+  text-align: center; 
+}
+
 
 
 .content {
@@ -157,7 +168,6 @@ html {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  justify-content: center;
 }
 
 
@@ -200,6 +210,9 @@ button:hover {
 }
 
 /* Aqui terminan los botones*/
+/* Aqui van las fotos de los animales*/
+
+/* Aqui termian las fotos de los animales*/
 /* aqqui comienza las cards*/
 div#root{
   display: flex;
@@ -356,6 +369,7 @@ dd {
 }
 .paypal-button {
   display: block;
+  align-items: center;
   width: 100%;
   border-radius: 23px;
   padding: 10px;
@@ -365,6 +379,13 @@ dd {
   border: none;
   cursor: pointer;
   font-size: 1em;
+}
+
+.paypal-logo {
+  width: 25px; 
+  height: auto;
+  margin-right: 10px;
+  
 }
 .card-button {
   display: block;
@@ -443,11 +464,11 @@ dd {
 
 .contact .row form{
   flex:1 1 40rem;
-  padding:2rem 2.5rem;
+  padding:3rem 2.5rem;
   box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
   border: .1rem solid rgba(0, 0, 0, .1);
   background: #fff;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /*
@@ -474,12 +495,12 @@ dd {
 
 .contact .row form .box{
   padding: 1rem;
-  font-size: 3.7rem;
+  font-size: 2.7rem;
   color: #4F2E1D;
   text-transform: none;
   border: .1rem solid rgba(0, 0, 0, .1);
   border-radius: .5rem;
-  margin: 3rem 0;
+  margin: 2rem 0;
   width: 100%;
 }
 
@@ -517,7 +538,7 @@ dd {
 }
 
 .footer-top .footer-column .box a:hover{
-  color: #471863;
+  color: #6F4F84;
   text-decoration: underline;
 }
 
@@ -536,7 +557,7 @@ dd {
 }
 
 .highlight span{
-  color: #471863;
+  color: #6F4F84;
 }
 
 
