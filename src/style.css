@@ -387,6 +387,15 @@ dd {
   margin-right: 10px;
   
 }
+
+/* CARD STYLES */
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Investigar */
+}
+
 .card-button {
   display: block;
   width: 100%;

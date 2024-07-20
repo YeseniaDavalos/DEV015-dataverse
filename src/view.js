@@ -15,6 +15,7 @@ export const renderItems = (data) => {
     const imageUrl = document.createElement("img");
     imageUrl.setAttribute("src", item.imageUrl);
     imageUrl.setAttribute("alt", item.name);
+    imageUrl.className = "card-image" // La propiedad className le agrega una clase
     divImg.appendChild(imageUrl);
 
     const dl = document.createElement("dl");
