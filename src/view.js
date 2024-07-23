@@ -8,6 +8,7 @@ export const renderItems = (data) => {
     const li = document.createElement("li");
     li.setAttribute("itemscope", "");
     li.setAttribute("itemtype", "https://schema.org/Thing");
+    li.className = "item";
 
     const divImg = document.createElement("div");
     li.appendChild(divImg);
@@ -15,7 +16,7 @@ export const renderItems = (data) => {
     const imageUrl = document.createElement("img");
     imageUrl.setAttribute("src", item.imageUrl);
     imageUrl.setAttribute("alt", item.name);
-    imageUrl.className = "card-image" // La propiedad className le agrega una clase
+    imageUrl.className = "card-image" // La propiedad className le agrega una clase para usar en Css
     divImg.appendChild(imageUrl);
 
     const dl = document.createElement("dl");
@@ -23,7 +24,7 @@ export const renderItems = (data) => {
 
     const dtNombre = document.createElement("dt");
     dl.appendChild(dtNombre);
-    dtNombre.innerHTML = "Nombre: ";
+    dtNombre.innerHTML = "Name: ";
 
     const ddNombre = document.createElement("dd");
     ddNombre.setAttribute("itemprop", "name");
@@ -35,18 +36,18 @@ export const renderItems = (data) => {
     dl.appendChild(dd);
     dd.innerHTML = item.shortDescription;
 
-    const dtAboutIt = document.createElement("dd");
-    dl.appendChild(dtAboutIt);
-    dtAboutIt.innerHTML = item["description"];
+    //const dtAboutIt = document.createElement("dd");
+    //dl.appendChild(dtAboutIt);
+    //dtAboutIt.innerHTML = item["description"];
 
-    const dtPet = document.createElement('dt');
-    dl.appendChild(dtPet);
-    dtPet.innerHTML = "Pet: ";
+    // const dtPet = document.createElement('dt');
+    // dl.appendChild(dtPet);
+    // dtPet.innerHTML = "Pet: ";
 
-    const ddPet = document.createElement('dd');
-    ddPet.setAttribute("itemprop", "pet");
-    dl.appendChild(ddPet);
-    ddPet.innerHTML = item.facts.pet;
+    // const ddPet = document.createElement('dd');
+    // ddPet.setAttribute("itemprop", "pet");
+    // dl.appendChild(ddPet);
+    // ddPet.innerHTML = item.facts.pet;
 
     const dtGender = document.createElement('dt');
     dl.appendChild(dtGender);

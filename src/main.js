@@ -8,75 +8,60 @@ import data from "./data/dataset.js";
 
 const showData = renderItems(data); //cambiar a renderItems
 const root = document.querySelector("#root"); // Reemplazado getElementById con querySelector
+const piechart = document.querySelector("#piechart"); // Reemplazado getElementById con querySelector
 root.appendChild(showData);
 
-let filteredData = data;
+let filteredData = data; // Duplico la data inicial
 
 const filterType = document.querySelector("#filter-select"); // Reemplazado getElementById con querySelector
 filterType.addEventListener("change", function (event) {
   root.innerHTML = "";
 
-  if (filterGender.value) {
-    // Esta el filtro de type con un valor?
-    filteredData = filterData(filteredData, "pet", event.target.value); // guardas data filtrada
-  } else {
-    filteredData = filterData(data, "pet", event.target.value); // usas la data general
-  }
+  filteredData = filterData(data, "pet", event.target.value); // Filtro por tipo de mascota
 
   if (filterGender.value) {
-    // Esta el filtro de type con un valor?
-    root.appendChild(
-      renderItems(filterData(filteredData, "pet", event.target.value))
-    );
-  } else {
-    root.appendChild(renderItems(filterData(data, "pet", event.target.value)));
+    filteredData = filterData(filteredData, "gender", filterGender.value);
   }
+
+  if (filterSize.value) {
+    filteredData = filterData(filteredData, "petSize", filterSize.value);
+  }
+
+  root.appendChild(renderItems(filteredData));
 });
 
 const filterGender = document.querySelector('[data-testid="select-filter"]');
 filterGender.addEventListener("change", function (event) {
   root.innerHTML = "";
 
+  filteredData = filterData(data, "gender", event.target.value);
+
   if (filterType.value) {
-    // Esta el filtro de type con un valor?
-    filteredData = filterData(filteredData, "gender", event.target.value); // guardas data filtrada
-  } else {
-    filteredData = filterData(data, "gender", event.target.value); // usas la data general
+    filteredData = filterData(filteredData, "pet", filterType.value);
   }
 
-  if (filterGender.value) {
-    // Esta el filtro de type con un valor?
-    root.appendChild(
-      renderItems(filterData(filteredData, "gender", event.target.value))
-    );
-  } else {
-    root.appendChild(
-      renderItems(filterData(data, "gender", event.target.value))
-    );
+  if (filterSize.value) {
+    filteredData = filterData(filteredData, "petSize", filterSize.value);
   }
+
+  root.appendChild(renderItems(filteredData));
 });
 
 const filterSize = document.querySelector("#size-select"); // Reemplazado getElementById con querySelector
 filterSize.addEventListener("change", function (event) {
   root.innerHTML = "";
 
-console.log(event.target.value);
+  filteredData = filterData(data, "petSize", event.target.value);
 
-  if (filterSize.value) {
-    filteredData = filterData(filteredData, "petSize", event.target.value);
-  } else {
-    filteredData = filterData(data, "petSize", event.target.value);
+  if (filterType.value) {
+    filteredData = filterData(filteredData, "pet", filterType.value);
   }
 
-  if (filterSize.value) {
-    root.appendChild(
-      renderItems(filterData(filteredData, "petSize", event.target.value))
-    );
-  } else {
-    root.appendChild(
-      renderItems(filterData(data, "petSize", event.target.value))
-    );
+  if (filterGender.value) {
+    filteredData = filterData(filteredData, "gender", filterGender.value);
   }
+
+  root.appendChild(renderItems(filteredData));
 });
 
 const sort = document.querySelector("#ordenar"); // Reemplazado getElementById con querySelector
@@ -84,11 +69,8 @@ sort.addEventListener("change", (event) => {
   const sortValue = event.target.value;
   
   let orderData;
-  if (sortValue === "asc") {
-    orderData = sortData(data, "name", sortValue);
-  }
-  if (sortValue === "desc") {
-    orderData = sortData(data, "name", sortValue);
+  if (sortValue === "asc" || sortValue === "desc") {
+    orderData = sortData(filteredData, "name", sortValue);
   }
   
   root.innerHTML = "";
@@ -106,7 +88,7 @@ clear.addEventListener("click", function () {
   root.appendChild(showData);
 });
 
-/*
+
 const statistics = document.querySelector("#compute-stats-btn"); // Reemplazado getElementById con querySelector
 statistics.addEventListener("click", function () {
   const statsDatos = document.createElement('p');
@@ -119,6 +101,5 @@ statistics.addEventListener("click", function () {
                           <p>Hay un promedio de ${petDogAvg}% caninos</p>
                           <p>El cual ${genderMaleAvg}% son machos</p>
                           <p>${genderFemaleAvg}% son hembras</p>`;
-  root.appendChild(statsDatos);
+  piechart.appendChild(statsDatos);
 });
-*/
