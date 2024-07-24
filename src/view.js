@@ -6,6 +6,7 @@ export const renderItems = (data) => {
 
   const liArray = data.map((item) => {
     const li = document.createElement("li");
+    li.setAttribute("itemprop", "item");
     li.setAttribute("itemscope", "");
     li.setAttribute("itemtype", "https://schema.org/Thing");
     li.className = "item";

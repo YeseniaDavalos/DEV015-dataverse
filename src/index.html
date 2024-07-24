@@ -71,7 +71,7 @@
         </select>
 
         <label for="ordenar"></label>
-        <select data-testid="sort" name="sort" id="ordenar">
+        <select data-testid="select-sort" name="sort" id="ordenar">
           <option value="">Order A-Z</option>
           <option value="asc">A-Z</option>
           <option value="desc">Z-A</option>
@@ -105,10 +105,9 @@
         ]);
 
         var options = {
-          width: '100%',
-          height: '100%',
+          width: 800,
+          height: 600,
           pieSliceText: 'percentage',
-
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
