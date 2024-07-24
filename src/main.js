@@ -8,7 +8,8 @@ import data from "./data/dataset.js";
 
 const showData = renderItems(data); //cambiar a renderItems
 const root = document.querySelector("#root"); // Reemplazado getElementById con querySelector
-const piechart = document.querySelector("#piechart"); // Reemplazado getElementById con querySelector
+// const piechart = document.querySelector("#piechart"); // Reemplazado getElementById con querySelector
+const results = document.querySelector("#results"); // Reemplazado getElementById con querySelector
 root.appendChild(showData);
 
 let filteredData = data; // Duplico la data inicial
@@ -97,9 +98,13 @@ statistics.addEventListener("click", function () {
   const petDogAvg = computedStats.petDogAvg;
   const genderMaleAvg = computedStats.genderMaleAvg;
   const genderFemaleAvg = computedStats.genderFemaleAvg;
-  statsDatos.innerHTML = `<p>Tenemos un promedio de ${petCatAvg}% felinos</p>
-                          <p>Hay un promedio de ${petDogAvg}% caninos</p>
-                          <p>El cual ${genderMaleAvg}% son machos</p>
-                          <p>${genderFemaleAvg}% son hembras</p>`;
-  piechart.appendChild(statsDatos);
+  const petSizeSmallAvg = computedStats.petSizeSmallAvg;
+  const petSizeBigAvg = computedStats.petSizeBigAvg;
+  statsDatos.innerHTML = `<p>We have an average of ${petCatAvg}% felines</p>
+                          <p>there is an average of ${petDogAvg}% canines,</p>
+                          <p>of which ${genderMaleAvg}% are males and</p>
+                          <p>${genderFemaleAvg}% are females.</p>
+                          <p>Among them, there are also ${petSizeSmallAvg}% small ones</p>
+                          <p>and ${petSizeBigAvg}% big ones</p>`;
+  results.appendChild(statsDatos);
 });
