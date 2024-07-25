@@ -45,7 +45,7 @@ section {
   display: inline-block;
   margin-top: 4rem;
   border-radius: 5rem;
-  background: #471863;
+  background: #6F4F84;
   color: #ffffff;
   padding: .9rem 3.5rem;
   cursor: pointer;
@@ -53,7 +53,7 @@ section {
 }
 
 .btn:hover {
-  background-color: #6F4F84;
+  background-color: #8566A1;
 }
 
 header {
@@ -825,6 +825,7 @@ footer::before {
   .make {
     font-size: 19px;
   }
+  
 }
 
 

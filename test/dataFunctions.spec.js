@@ -2,6 +2,7 @@ import { filterData, computeStats, sortData } from '../src/dataFunctions.js';
 import { data as testData } from './data.js';
 //import { fakeData } from './dataFunctions.spec.js';
 //llamar uno con pet, petSize y gender
+//filterData filtra los datos según el criterio proporcionado (tipo, tamaño de mascota, género)
 
 describe("filterData", () => {
   it("should filter pets by type and return the quantity of cats", () => {
