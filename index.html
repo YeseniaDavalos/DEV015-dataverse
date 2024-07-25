@@ -92,7 +92,8 @@
     <script type="text/javascript">
       google.charts.load('current', { 'packages': ['corechart'] });
       google.charts.setOnLoadCallback(drawChart);
-
+      
+      
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
@@ -103,7 +104,7 @@
           ['Small', 3.36],
           ['Big', 2.4],
         ]);
-
+      
         var options = {
           width: 800,
           height: 600,
