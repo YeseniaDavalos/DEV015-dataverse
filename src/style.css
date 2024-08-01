@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-:root{
+
+:root {
   --purple: #471863;
 }
 
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- font-family: "Montserrat", sans-serif;
- outline: none;
- border: none;
- text-decoration: none;
- text-transform: capitalize;
- transition: .2s linear;
- font-size: 26px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+  font-size: 26px;
 }
 
 
@@ -25,22 +26,22 @@ html {
 }
 
 
- section{
+section {
   padding: 0rem 8%;
   background: #F0ECE3;
- }
+}
 
- .heading{
+.heading {
   text-align: center;
   font-size: 4rem;
   color: #4F2E1D;
   padding: 1rem;
   margin: 0rem -180px;
   background: #C7B198;
- }
+}
 
 
- .btn{
+.btn {
   display: inline-block;
   margin-top: 4rem;
   border-radius: 5rem;
@@ -49,13 +50,13 @@ html {
   padding: .9rem 3.5rem;
   cursor: pointer;
   font-size: 2rem;
- }
+}
 
- .btn:hover{
+.btn:hover {
   background-color: #6F4F84;
- }
+}
 
- header {
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -67,37 +68,37 @@ html {
   justify-content: space-between;
   z-index: 1000;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
- }
+}
 
- header .logo {
+header .logo {
   height: 85px;
- }
+}
 
- header .navbar a {
+header .navbar a {
   font-size: 2rem;
   color: #511D00;
   padding: 0 1.5rem;
- }
- 
- header .navbar a:hover {
+}
+
+header .navbar a:hover {
   color: #ffffff;
- }
- 
- header .icons a{
+}
+
+header .icons a {
   font-size: 2.5rem;
   color: #471863;
   margin-left: 1.5rem;
- }
+}
 
- header .icons a:hover{
+header .icons a:hover {
   color: #ffffff;
- }
+}
 
- header #toggler{
+header #toggler {
   display: none;
- }
+}
 
- header .fa-bars{
+header .fa-bars {
   font-size: 3rem;
   color: #6F4F84;
   border-radius: .5rem;
@@ -105,9 +106,9 @@ html {
   cursor: pointer;
   border: .1rem solid rgba(0, 0, 0, .3);
   display: none;
- }
+}
 
-.home{
+.home {
   display: flex;
   align-items: center;
   min-height: 100vh;
@@ -116,37 +117,37 @@ html {
   background-position: center;
 }
 
-.home .content{
+.home .content {
   max-width: 68rem;
 }
 
-.home .content h3{
+.home .content h3 {
   font-size: 90px;
   color: #6F4F84;
   line-height: 55px;
 }
 
-.home .content span{
+.home .content span {
   font-size: 42px;
   color: #511D00;
   padding: 1rem 0;
   line-height: 55px;
 }
 
-.home .content p{
+.home .content p {
   font-size: 1.7rem;
   color: #705445;
   padding: 0rem 0;
   line-height: 1.5;
 }
+
 /* Aqui va contenedor stadisticas */
-.contenedorStadisticas{
+.contenedorStadisticas {
   display: flex;
   align-items: center;
   height: auto;
   margin: 0;
   text-align: center;
-  padding: 20px;
 }
 
 /* Aqui termina stadisticas */
@@ -154,8 +155,8 @@ html {
 /* Aqui van los botones*/
 .filter-container {
   display: flex;
-  align-items: center; 
-  gap: 10px; 
+  align-items: center;
+  gap: 10px;
   justify-content: center;
   line-height: 65px;
   background: #F0ECE3;
@@ -163,9 +164,9 @@ html {
 
 .label-style {
   color: #471863;
-  padding: 10px 20px; 
-  font-size: 20px; 
-  text-align: center; 
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
 }
 
 
@@ -220,7 +221,7 @@ button:hover {
 
 /* aqqui comienza las cards*/
 
-div#root{
+div#root {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,45 +234,50 @@ ul {
   flex-wrap: wrap;
   list-style: none;
   justify-content: center;
-gap: 10px;
+  gap: 10px;
   max-width: 1340px;
   padding-top: 30px;
 }
+
 .item {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
   width: 300px;
   padding: 16px;
   box-sizing: border-box;
   transition: transform 0.2s;
-display: flex;
+  display: flex;
   flex-direction: column;
   max-width: 300px;
 }
+
 .item:hover {
   transform: scale(1.05);
 }
+
 .root #imageUrl {
   width: 10%;
   height: 10px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
 }
+
 dt {
   margin: -20px 0 0px;
   font-size: 19px;
   color: #4F2E1D;
   padding-top: 20px;
-  
+
 }
+
 dd {
   margin: 0 0 10px;
   font-size: 15px;
   color: #000000;
-  
+
 }
 
 
@@ -291,7 +297,7 @@ dd {
 .content-help-our-animals {
   width: 60%;
   padding: 20px;
-  
+
 }
 
 .content-help-our-animals p {
@@ -337,12 +343,14 @@ dd {
   text-align: right;
   margin-right: 5px;
 }
+
 .amount {
   display: flex;
   align-items: center;
   flex-direction: column;
   align-items: center;
 }
+
 #donation-amount {
   width: 100px;
   padding: 15px;
@@ -354,35 +362,39 @@ dd {
   margin-bottom: 10px;
   background-color: #ECECEC;
 }
+
 .amount span {
   font-size: 16px;
 }
 
 .currency {
-  
+
   padding: 15px 33px;
-  background-color: #6F4F84; 
+  background-color: #6F4F84;
   color: #ffffff;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   text-align: center;
 }
+
 .checkbox-container {
   display: flex;
   align-items: center;
 }
 
 #monthly-donation {
-  margin-right: 10px; 
+  margin-right: 10px;
   margin-left: 79px;
   width: 20px;
   height: 20px;
 }
-.make{
+
+.make {
   font-size: 21px;
   color: #4F2E1D;
 }
+
 .paypal-button {
   display: block;
   align-items: center;
@@ -400,10 +412,10 @@ dd {
 
 .paypal-logo {
   margin-bottom: -10px;
-  width: 32px; 
+  width: 32px;
   height: auto;
   margin-right: 2px;
-  
+
 }
 
 /* CARD STYLES */
@@ -411,7 +423,7 @@ dd {
 .card-image {
   width: 100%;
   height: 200px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .card-button {
@@ -431,48 +443,50 @@ dd {
   color: #00457C;
   border: 1px solid #00457C;
 }
+
 .paypal-button:hover {
   background-color: #f2d883;
 }
-.card-button:hover{
+
+.card-button:hover {
   background-color: #b3ceff;
 }
 
 /* aqqui termina help our animals*/
-.our .row{
+.our .row {
   display: flex;
   align-items: center;
-  gap:2rem;
+  gap: 2rem;
   flex-wrap: wrap;
   padding: 2rem 0;
   padding-bottom: 3rem;
 }
 
-.our .row .video-contain{
+.our .row .video-contain {
   flex: 1 1 40rem;
   position: relative;
 }
 
-.our .row .video-contain video{
+.our .row .video-contain video {
   width: 100%;
   border: 1.5rem solid #fff;
   border-radius: .5rem;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0.1);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0.1);
   height: 100%;
   object-fit: cover;
 }
 
 
-.our .row .content{
-  flex:1 1 40rem;
+.our .row .content {
+  flex: 1 1 40rem;
 }
 
-.our .row .content h3{
+.our .row .content h3 {
   font-size: 3rem;
   color: #511D00;
 }
 
-.our .row .content p{
+.our .row .content p {
   font-size: 19px;
   color: #705445;
   padding: .5rem 0;
@@ -480,7 +494,7 @@ dd {
   line-height: 1.5;
 }
 
-.contact .row{
+.contact .row {
   display: flex;
   flex-wrap: wrap-reverse;
   gap: 0.5rem;
@@ -488,9 +502,9 @@ dd {
   padding: 2rem;
 }
 
-.contact .row form{
-  flex:2 32 50rem;
-  padding:3rem 1.5rem;
+.contact .row form {
+  flex: 2 32 50rem;
+  padding: 3rem 1.5rem;
   box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
   border: .1rem solid rgba(0, 0, 0, .1);
   background: #fff;
@@ -511,17 +525,18 @@ dd {
 
 
 
-.contact .row .image{
-  flex: 1 1 40rem; 
+
+.contact .row .image {
+  flex: 1 1 40rem;
 }
- 
-.contact .row .image img{
+
+.contact .row .image img {
   width: 100%;
   padding-top: 12px;
   height: 629px;
 }
 
-.contact .row form .box{
+.contact .row form .box {
   padding: 1rem;
   font-size: 2.5rem;
   color: #4F2E1D;
@@ -532,49 +547,49 @@ dd {
   width: 100%;
 }
 
-.contact .row form .box:focus{
+.contact .row form .box:focus {
   border-color: #6F4F84;
 }
 
-.contact .row form textarea{
+.contact .row form textarea {
   height: 15rem;
   resize: none;
 }
 
-.footer-top .footer-column{
+.footer-top .footer-column {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
 
-.footer-top .footer-column .box{
-   flex: 1 1 25rem;
-   border: none;
+.footer-top .footer-column .box {
+  flex: 1 1 25rem;
+  border: none;
 }
 
-.footer-top .footer-column .box h3{
+.footer-top .footer-column .box h3 {
   color: #705445;
   font-size: 2.5rem;
   padding: 1rem 0;
 }
 
-.footer-top .footer-column .box a{
+.footer-top .footer-column .box a {
   display: block;
   color: #511D00;
   font-size: 1.8rem;
   padding: 1rem 0;
 }
 
-.footer-top .footer-column .box a:hover{
+.footer-top .footer-column .box a:hover {
   color: #6F4F84;
   text-decoration: underline;
 }
 
-.footer-top .footer-column .box img{
+.footer-top .footer-column .box img {
   margin-top: 1rem;
 }
 
-.highlight{
+.highlight {
   text-align: center;
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -584,7 +599,7 @@ dd {
   border-top: .1rem solid rgb(0, 0, 0);
 }
 
-.highlight span{
+.highlight span {
   color: #6F4F84;
 }
 
@@ -597,86 +612,6 @@ dd {
 .payment-methods img {
   height: 60px;
 }
-
-
-
-
-
-
-
-
-/*svg text - fonts sizer*/
-
-
-
-
-
-/*
-.contact {   
-  padding: 50px;
-  background-color: #F0ECE3;
-}
-.formulario {
-  width: 20px;
-  height: 20px;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  max-width: 1200px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form, .image {
-  flex: 1;
-  padding: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.box {
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact form .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: 5rem;
-  background: #6F4F84;
-  color: #ffffff;
-  padding: .9rem 3.5rem;
-  cursor: pointer;
-  font-size: 1.7rem;
- 
-}
-
-.contact form .btn:hover {
-  background: #6F4F84;
-}
-
-.contact .image {
-  width: 45%;
-}
-
-.contact .image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 5px;
-  max-height: 100%;
-}
-
-*/
-
 
 
 
@@ -776,7 +711,8 @@ footer::before {
 
 
 
-@media  (max-width: 991px) {
+@media (max-width: 991px) {
+
   .content-help-our-animals,
   .donation-box {
     width: 100%;
@@ -791,7 +727,7 @@ footer::before {
   }
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .heading {
     font-size: 3rem;
     padding: 1rem 0;
@@ -832,12 +768,13 @@ footer::before {
   }
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .label-style {
     font-size: 16px;
   }
 
-  select, button {
+  select,
+  button {
     padding: 8px 15px;
     font-size: 14px;
   }
@@ -852,44 +789,46 @@ footer::before {
 
 
 
- @media (max-width:991px){
+@media (max-width:991px) {
 
-  html{
+  html {
     font-size: 55%;
   }
 
-  header{
+  header {
     padding: 2rem;
   }
 
-  section{
+  section {
     padding: 2rem;
   }
 
-  .home{
+  .home {
     background-position: left;
   }
- }
+}
 
- @media (max-width:768px){
+@media (max-width:768px) {
 
-   header .fa-bars{
+  header .fa-bars {
     display: block;
-   }
+  }
 
-   header .navbar{
+  header .navbar {
     position: absolute;
-    top: 100%; left: 0; right: 0;
+    top: 100%;
+    left: 0;
+    right: 0;
     background-color: #C7B198;
     border-top: .1rem solid rgba(0, 0, 0, .1);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
-  header #toggler:checked ~ .navbar{
+  header #toggler:checked~.navbar {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
-  header .navbar a{
+  header .navbar a {
     margin: 1.5rem;
     padding: 1.5rem;
     background: #DFD3C3;
@@ -897,44 +836,56 @@ footer::before {
     display: block;
   }
 
-  .home .content h3{
+  .home .content h3 {
     font-size: 5rem;
   }
-  .home .content span{
+
+  .home .content span {
     font-size: 2.5rem;
   }
-   .contenedorStadisticas{
-    background-color: tomato;
-    width: 100%;
-   }
 
- }
+  .contenedorStadisticas {
+    display: none;
+  }
 
- @media (max-width:450px){
+}
 
-  html{
+@media (max-width:450px) {
+
+  html {
     font-size: 50%;
   }
 
-  .heading{
+  .heading {
     font-size: 3rem;
 
   }
 
- }
-
- #chart_wrap {
-  width: 100%;
-  border:1px solid gray;
-  position: relative;
-  padding-bottom: 100%;
-  height: 0;
-  overflow:hidden;
 }
+
+#chart_wrap {
+  border: 1px solid gray;
+  height: 0;
+  overflow: hidden;
+  width: 50%;
+  height: 20%;
+}
+
+
 #piechart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width:100%;
-  height:100%;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  #chart_wrap {
+    width: 70%; 
+    height: 30%; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  #chart_wrap {
+    width: 90%; 
+    height: 40%; 
+  }
 }

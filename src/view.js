@@ -6,6 +6,7 @@ export const renderItems = (data) => {
 
   const liArray = data.map((item) => {
     const li = document.createElement("li");
+    li.setAttribute("itemprop", "item");
     li.setAttribute("itemscope", "");
     li.setAttribute("itemtype", "https://schema.org/Thing");
     li.className = "item";
@@ -16,7 +17,7 @@ export const renderItems = (data) => {
     const imageUrl = document.createElement("img");
     imageUrl.setAttribute("src", item.imageUrl);
     imageUrl.setAttribute("alt", item.name);
-    imageUrl.className = "card-image" // La propiedad className le agrega una clase para usar en Css
+    imageUrl.className = "card-image" 
     divImg.appendChild(imageUrl);
 
     const dl = document.createElement("dl");
@@ -35,19 +36,6 @@ export const renderItems = (data) => {
     dd.setAttribute("itemprop", "shortDescription");
     dl.appendChild(dd);
     dd.innerHTML = item.shortDescription;
-
-    //const dtAboutIt = document.createElement("dd");
-    //dl.appendChild(dtAboutIt);
-    //dtAboutIt.innerHTML = item["description"];
-
-    // const dtPet = document.createElement('dt');
-    // dl.appendChild(dtPet);
-    // dtPet.innerHTML = "Pet: ";
-
-    // const ddPet = document.createElement('dd');
-    // ddPet.setAttribute("itemprop", "pet");
-    // dl.appendChild(ddPet);
-    // ddPet.innerHTML = item.facts.pet;
 
     const dtGender = document.createElement('dt');
     dl.appendChild(dtGender);

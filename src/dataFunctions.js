@@ -16,18 +16,8 @@ export const sortData = (data, sortBy, sortOrder) => {
 };
 
 export const filterData = (data, filterBy, value) => {
-  //if (filterBy === 'Gender') {
   const filterGender = data.filter((item) => item.facts[filterBy] === value); //le damos un valor al filtro que llamamos de nuestra data.js
   return filterGender;
-  //}
-  /* if (filterBy === 'Pet') {
-    const filterPet = data.filter((item) => item.facts[filterBy] = value);
-    return filterPet;
-  }
-  if (filterBy === 'Pet size') {
-    const filterSize = data.filter((item) => item.facts[filterBy] = value); 
-    return filterSize; 
-  }*/
 };
 
 export const computeStats = (data) => {
